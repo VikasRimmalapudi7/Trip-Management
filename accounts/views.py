@@ -25,12 +25,14 @@ def register(request):
               user=User.objects.create_user(username=username,password=password1,email=email,first_name=first_name,last_name=last_name)
               user.save()
               messages.info(request,'Acoount Created Successfully !!!!')
+              
               return redirect('login')
        
       
       else:
               messages.info(request,'Passwords not matching')
               return redirect('register')
+              
       return redirect('/')  
 
 
