@@ -285,10 +285,16 @@
 							<!-- Destination -->
 							<div class="destination item">
 								<div class="destination_image">
-								<button class="button">	<img src="{{dest.img.url}}" alt=""></button>
+									<form action="booking" method="post">
+									   
+									<img src="{{dest.img.url}}" alt="">
+									{% if user.is_authenticated %}
+									<li><a href="accounts/booking">Book</a></li>
+									{% endif %}
 									{% if dest.offer %}
 									<div class="spec_offer text-center"><a href="#">Special Offer</a></div>
 									{% endif %} 
+								</form>
 									
 								</div>
 								<div class="destination_content">

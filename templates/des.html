@@ -129,12 +129,13 @@
 
 							{% for dest in dests %}
 							<!-- Destination -->
+							<form action="book" method="post">
+								{% csrf_token %}
 							<div class="destination item">
 								<div class="destination_image">
-								<button class="button">	<img src="{{dest.img.url}}" alt=""></button>
-									{% if dest.offer %}
+									<img src="{{dest.img.url}}" alt="">
 									<div class="spec_offer text-center"><a href="#">Special Offer</a></div>
-									{% endif %} 
+									
 									
 								</div>
 								<div class="destination_content">
@@ -146,6 +147,7 @@
 									<div class="destination_price">From ${{dest.price}}</div>
 								</div>
 							</div>
+						    </form>
 
 							{% endfor %}
 

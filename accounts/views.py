@@ -31,13 +31,8 @@ def register(request):
       
       else:
               messages.info(request,'Passwords not matching')
-              return redirect('register')
-              
+              return redirect('register')     
       return redirect('/')  
-
-
-
-
    else:
 
       return render(request,'register.html')
@@ -69,3 +64,5 @@ def logout(request):
     return redirect('/')
 
 
+def booking(request):
+     return render(request,'booking.html')
