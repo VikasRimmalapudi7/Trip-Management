@@ -36,7 +36,13 @@ def register(request):
    else:
 
       return render(request,'register.html')
- 
+def booking(request):
+    #  if request.method=="POST":
+
+
+
+
+     return render(request,'booking.html') 
 
 
 def login(request):
@@ -64,5 +70,3 @@ def logout(request):
     return redirect('/')
 
 
-def booking(request):
-     return render(request,'booking.html')
